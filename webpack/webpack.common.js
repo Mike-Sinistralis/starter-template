@@ -17,6 +17,7 @@ function getCommonConfig(options) {
     new HtmlWebpackPlugin({
       title: 'Test App',
       template: path.resolve(options.sourcePath, 'index.html'),
+      inject: false,
     }),
   ];
   
@@ -62,12 +63,16 @@ function getCommonConfig(options) {
         green: '\u001b[32m',
       },
     },
+    performance: isProd && {
+      maxAssetSize: 100,
+      maxEntrypointSize: 300,
+      hints: 'warning',
+    },
     devServer: {
-      contentBase: 'client',
+      contentBase: path.resolve(options.projectRoot, 'dist'),
       historyApiFallback: true,
       port: options.port,
       compress: isProd,
-      inline: !isProd,
       hot: !isProd,
       stats: {
         assets: true,

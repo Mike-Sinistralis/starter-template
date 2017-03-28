@@ -1,8 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import wut from './2';
-
 import './scss/index.scss';
 
 render(
