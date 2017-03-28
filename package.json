@@ -1,0 +1,52 @@
+{
+  "name": "webrtc-shared-memory-game",
+  "version": "0.1.0",
+  "description": "Playing around with the WebRTC spec and the Shared Memory Arrays. Game concept wirh Phaser.",
+  "main": "index.jsx",
+  "repository": {
+    "type": "git",
+    "url": "https://mzimmermantt@bitbucket.org/turningtech/web-polling-client.git"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --env development --port 3000",
+    "build": "webpack --env production",
+    "lintSCSS": "stylelint src/**/*.scss --syntax scss --config stylelint.config.js",
+    "lintSCSS:fix": "stylefmt -r src/**/*.scss --config stylelint.config.js && npm run lintSCSS",
+    "lintJS": "eslint --ext .js --ext .jsx ./",
+    "lintJS:fix": "eslint --ext .js --ext .jsx ./ --fix",
+    "lint": "npm run lintSCSS && npm run lintJS",
+    "lint:fix": "npm run lintSCSS:fix && npm run lintJS:fix"
+  },
+  "author": "Michael Zimmerman",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-strict-mode": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.27.3",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-import-resolver-webpack": "^0.8.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "html-webpack-plugin": "^2.28.0",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "node-sass": "^4.5.1",
+    "react-dom": "^15.4.2",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.0",
+    "stylefmt": "^5.3.0",
+    "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^16.0.0",
+    "webpack": "^2.3.2",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "react": "^15.4.2"
+  }
+}
